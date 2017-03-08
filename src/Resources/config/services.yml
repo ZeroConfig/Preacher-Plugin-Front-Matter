@@ -1,0 +1,17 @@
+services:
+
+  preacher.front_matter.enricher:
+    class: ZeroConfig\Preacher\Plugin\FrontMatter\Data\FrontMatterEnricher
+    arguments:
+      - '@preacher.front_matter.reader'
+    tags:
+      - { name: 'preacher.enricher' }
+
+  preacher.front_matter.locator:
+    class: ZeroConfig\Preacher\Plugin\FrontMatter\Locator\JsonFrontMatterLocator
+
+  preacher.front_matter.reader:
+    class: ZeroConfig\Preacher\Plugin\FrontMatter\Reader\JsonFrontMatterReader
+    arguments:
+      - '@preacher.front_matter.locator'
+      - '@serializer.encoder.json'

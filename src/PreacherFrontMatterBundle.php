@@ -3,6 +3,9 @@ namespace ZeroConfig\Preacher\Plugin\FrontMatter;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
+/**
+ * @codeCoverageIgnore
+ */
 class PreacherFrontMatterBundle extends Bundle
 {
     /**
