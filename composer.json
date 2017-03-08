@@ -1,0 +1,27 @@
+{
+  "name": "zero-config/preacher-plugin-front-matter",
+  "type": "preacher-plugin",
+  "description": "Front matter support for Preacher",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Jan-Marten de Boer",
+      "email": "github@johmanx.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.0",
+    "symfony/symfony": "^3.2.4",
+    "zero-config/preacher-installer": "^1.0.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "ZeroConfig\\Preacher\\Plugin\\FrontMatter\\": "src"
+    }
+  },
+  "extra": {
+    "class": "\\ZeroConfig\\Preacher\\Plugin\\FrontMatter\\PreacherFrontMatterBundle"
+  }
+}
